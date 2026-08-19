@@ -1,0 +1,13 @@
+{
+  "semi": true,
+  "singleQuote": false,
+  "useTabs": true,
+  "bracketSpacing": true,
+  "singleAttributePerLine": true,
+  "jsxSingleQuote": false,
+  "tabWidth": 4,
+  "plugins": [
+	"prettier-plugin-tailwindcss"
+  ],
+  "tailwindStylesheet": "./src/app/globals.css"
+}
