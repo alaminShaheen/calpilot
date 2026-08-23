@@ -12,6 +12,9 @@ const EnvSchema = z.object({
 		.string()
 		.min(1, { error: "DESCOPE_PROJECT_ID is required" }),
 	DESCOPE_MANAGEMENT_KEY: z.string().min(1).optional(),
+	DESCOPE_CALENDAR_CONNECTION_ID: z
+		.string()
+		.min(1, { error: "DESCOPE_CALENDAR_CONNECTION_ID is required" }),
 });
 
 const parsed = EnvSchema.safeParse(process.env);

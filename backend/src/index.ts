@@ -2,6 +2,7 @@ import cors from "cors";
 import express from "express";
 import { getPool } from "./db/pool.js";
 import { env } from "./config/env.js";
+import { connectionController } from "./modules/connection/connection.controller.js";
 
 const app = express();
 
@@ -30,6 +31,8 @@ app.get("/healthcheck", async (req, res) => {
 		});
 	}
 });
+
+app.use("/api/connections", connectionController);
 
 const server = app.listen(env.PORT, () => {
 	const addr = server.address();
