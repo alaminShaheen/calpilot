@@ -9,8 +9,12 @@ const SignOutButton = () => {
 	const sdk = useDescope();
 
 	async function onSignOut() {
-		await sdk.logout();
-		router.push("/sign-in");
+		try {
+			await sdk.logout();
+			router.push("/sign-in");
+		} catch (e) {
+
+		}
 	}
 
 	return (
